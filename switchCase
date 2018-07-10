@@ -1,0 +1,41 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace footballManagerSwitch.cs
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine ("Who do you think should have initially replaced SAF out of the following:  Mourinho, VanGaal, Moyes, Enrique or Allardyce");
+            string manager = Convert.ToString(Console.ReadLine()).ToLower();
+            //string lower = manager.ToLower(); //not needed in this case, especially as it's not called to the switch case - instead added to the end of the previous variable as you can see.
+
+            switch (manager)
+            {
+                case "mourinho":
+                case "jose":
+                    Console.WriteLine("He certainly should have joined sooner!");
+                    break;
+                case "vangaal":
+                    Console.WriteLine("Oh please, he spent more time rolling on the floor!");
+                    break;
+                case "moyes":
+                    Console.WriteLine("He was only good at Everton, seen him since?");
+                    break;
+                case "enrique":
+                    Console.WriteLine("Hmm, more suited to spanish football, he's their head coach now!");
+                    break;
+                case "allardyce":
+                    Console.WriteLine("Yeah, if you want to see route one football!");
+                    break;
+                default:
+                    Console.WriteLine("Please specify the manager as above.");
+                    break;
+            }
+        } 
+    }
+}
